@@ -65,21 +65,19 @@ android {
     }
 
     buildTypes {
-        buildTypes {
-            debug {
-                signingConfig signingConfigs.release
-            }
-            profile {
-                signingConfig signingConfigs.release
-            }
-            release {
-                signingConfig signingConfigs.release
-                minifyEnabled true
-                shrinkResources true
-                proguardFiles getDefaultProguardFile(
-                        'proguard-android-optimize.txt'),
-                        'proguard-rules.pro'
-            }
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        profile {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'),
+                    'proguard-rules.pro'
         }
     }
 }
